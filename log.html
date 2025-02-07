@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="log.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <h1 class="logo">StudentVerse </h1>
+            <p class="subtitle">Sign in to your account</p>
+            <!-- Form, although the form action is not required if you're just redirecting -->
+            <form action="index.html" method="post">
+                <div class="input-container">
+                    <label for="email">Email</label>
+                    <input type="email" color="white" id="email" name="email" required>
+                </div>
+                <div class="input-container">
+                    <label for="password">Password</label>
+                    <input type="password" color="white" id="password" name="password" required>
+                </div>
+                <!-- Wrap the button in an anchor tag to redirect -->
+                <a href="index.html">
+                    <button type="button" class="submit-btn">Log In</button>
+                </a>
+                <div class="footer-links">
+                    <a href="#">Forgot your password?</a>
+                    <a href="#">Sign up</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="log.js"></script>
+</body>
+
+</html>

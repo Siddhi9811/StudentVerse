@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Marketplace</title>
+    <link rel="stylesheet" href="stud.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Add some basic styles for the course boxes */
+        body {
+    font-family: Arial, sans-serif; /* Set a default font */
+    background-image: url("lib.jpeg.jpg"); /* Light background for the body */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+header {
+    background-color: transparent; /* Dark background for header with transparency */
+    color: #fff; /* White text color */
+    padding: 10px 20px; /* Padding for header */
+}
+
+nav {
+    display: flex; /* Use flexbox for navigation */
+    justify-content: space-between; /* Space between logo and links */
+    align-items: center; /* Center items vertically */
+}
+
+.nav-links {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    display: flex; /* Use flexbox for links */
+}
+
+.nav-links li {
+    margin-left: 20px; /* Space between links */
+}
+
+header .nav-links li a:hover {
+    color: #f39c12; /* Change color to gold on hover */
+}
+
+.nav-links a {
+    color: #fff; /* White text color for links */
+    text-decoration: none; /* Remove underline from links */
+}
+
+/* Course section styles */
+#courses-section {
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Space between boxes */
+    padding: 20px; /* Padding for the section */
+}
+
+.course {
+    background-color: rgba(249, 249, 249, 0.9); /* Light background for the course box with slight transparency */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Padding inside the box */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition for hover effect */
+    text-decoration: none; /* Remove underline from links */
+    color: #333; /* Text color */
+    display: flex; /* Use flexbox for content alignment */
+    flex-direction: column; /* Stack content vertically */
+    justify-content: space-between; /* Space between content */
+    height: 250px; /* Fixed height for square shape */
+    position: relative; /* Position for animation */
+    overflow: hidden; /* Hide overflow */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.course:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+    transform: scale(1.05); /* Slightly scale up on hover */
+}
+
+h2 {
+    margin-top: 0; 
+}
+
+/* Social icons styles */
+.social-icons {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Center the icons horizontally */
+    margin-top: 10px; /* Add some space above the icons */
+}
+
+.social-icon {
+    margin: 0 10px; /* Add horizontal spacing between icons */
+    font-size: 24px; /* Increase icon size for better visibility */
+    color: #faf7f7; /* Set icon color */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.social-icon:hover {
+    color: #f39c12; /* Change color on hover */
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.8); /* Dark background for footer with transparency */
+    color: #fff; /* White text color */
+    text-align: center; /* Center text */
+    padding: 20px; /* Padding for footer */
+}    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>StudentVerse</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="item.html">Upload</a></li>
+                <li><a href="list.html">List</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="log.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="courses-section">
+	
+            <a href="bcom.html" class="course">
+                <h2>1. BCOM (Bachelor of Commerce)</h2>
+                <p>BCOM is a three-year undergraduate degree program that focuses on commerce and business studies.</p>
+            </a>
+	
+            <a href="bcom_hons.html" class="course">
+                <h2>2. BCOM HONS (Bachelor of Commerce Honors)</h2>
+                <p>BCOM HONS is a three-year undergraduate degree program that is similar to BCOM, but with a more specialized focus.</p>
+            </a>
+	
+            <a href="bca.html" class="course">
+                <h2>3. BCA (Bachelor of Computer Applications)</h2>
+                <p>BCA is a three-year undergraduate degree program that focuses on computer applications and software development.</p>
+            </a>
+	
+            <a href="bba.html" class="course">
+                <h2>4. BBA (Bachelor of Business Administration)</h2>
+                <p>BBA is a three-year undergraduate degree program that focuses on business administration and management.</p>
+            </a>
+	
+            <a href="mba.html" class="course">
+                <h2>5. MBA (Master of Business Administration)</h2>
+                <p>MBA is a two-year postgraduate degree program that focuses on advanced business administration and management.</p>
+            </a>
+	
+            <a href="mca.html" class="course">
+                <h2>6. MCA (Master of Computer Applications)</h2>
+                <p>MCA is a two-year postgraduate degree program that focuses on advanced computer applications and software development.</p>
+            </a>
+	
+            <a href="btech.html" class="course">
+                <h2>7. BTECH (Bachelor of Technology)</h2>
+                <p>BTECH is a four-year undergraduate degree program that focuses on engineering and technology.</p>
+            </a>
+	
+            <a href="mtech.html" class="course">
+                <h2>8. MTECH (Master of Technology)</h2>
+                <p>MTECH is a two-year postgraduate degree program that focuses on advanced engineering and technology.</p>
+            </a>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Student Marketplace. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.instagram.com" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://wa.me/1234567890" target="_blank" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="stud.js"></script>
+</body>
+</html>

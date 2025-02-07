@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document List - Student Marketplace</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Add some basic styling for the table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: transparent; /* Set header background to transparent */
+            color: #fffdfd; /* Set header text color */
+        }
+
+        tr:nth-child(even) {
+            background-color: transparent;
+        }
+
+        tr:hover {
+            background-color: #beb6b6; /* Change row background color on hover */
+        }
+
+        tr:hover th {
+            background-color: rgba(243, 156, 18, 0.8); /* Change header background color on row hover */
+            color: white; /* Change header text color on row hover */
+        }
+        .social-icons {
+            display: flex; /* Use flexbox for alignment */
+            justify-content: center; /* Center the icons horizontally */
+            margin-top: 10px; /* Add some space above the icons */
+        }
+
+        .social-icon {
+            margin: 0 10px; /* Add horizontal spacing between icons */
+            font-size: 24px; /* Increase icon size for better visibility */
+            color: #f7f3f3; /* Set icon color */
+            transition: color 0.3s; /* Smooth transition for hover effect */
+        }
+
+        .social-icon:hover {
+            color: #f39c12; /* Change color on hover */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>StudentVerse</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="item.html">Upload</a></li>
+                <li><a href="list.html">List</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="log.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Document List Section -->
+        <section class="document-list">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Item Type</th>
+                        <th>Title</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                        <th>Link</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Notes</td>
+                        <td>Python Notes</td>
+                        <td>Detailed notes on the fundamentals of python.</td>
+                        <td>100</td>
+                        <td><a href="python.pdf">View</a></td>
+                    </tr>
+                    <tr>
+                        <td>Notes</td>
+                        <td>Financial Management Notes</td>
+                        <td>Detailed notes on the fundamentals of financial management.</td>
+                        <td>100</td>
+                        <td><a href="financial.pdf">View</a></td>
+                    </tr>
+                    <tr>
+                        <td>Notes</td>
+                        <td>business Law Notes</td>
+                        <td>Detailed notes on the fundamentals of business.</td>
+                        <td>100</td>
+                        <td><a href="administrative.pdf">View</a></td>
+                    </tr>
+                    <tr>
+                        <td>YouTube Video</td>
+                        <td>DSA with C++ Tutorials</td>
+                        <td>Watch videos explaining DSA concepts.</td>
+                        <td>200</td>
+                        <td><a href="https://youtu.be/VTLCoHnyACE?si=T7N77EyrmbmBh02C">Watch</a></td>
+                    </tr>
+                    <tr>
+                        <td>YouTube Video</td>
+                        <td>Python Tutorials</td>
+                        <td>Watch videos explaining python concepts.</td>
+                        <td>200</td>
+                        <td><a href="https://youtu.be/UrsmFxEIp5k?si=ja31EwsAhnMzO6cX">Watch</a></td>
+                    </tr>
+                    <tr>
+                        <td>YouTube Video</td>
+                        <td>Java Tutorials</td>
+                        <td>Watch videos explaining java concepts.</td>
+                        <td>200</td>
+                        <td><a href="https://youtu.be/UmnCZ7-9yDY?si=yIgniEshFTGYLQsG">Watch</a></td>
+                    </tr>
+                    <tr>
+                        <td>eBook</td>
+                        <td>Maths eBook</td>
+                        <td>Complete guide to calculus for beginners.</td>
+                        <td>150</td>
+                        <td><a href="maths.pdf">Download</a></td>
+                    </tr>
+                    <tr>
+                        <td>eBook</td>
+                        <td>biotech eBook</td>
+                        <td>Complete guide to biotech for beginners.</td>
+                        <td>150</td>
+                        <td><a href="biotech.pdf">Download</a></td>
+                    </tr>
+                    <tr>
+                        <td>eBook</td>
+                        <td>Business eBook</td>
+                        <td>Complete guide to marketing for beginners.</td>
+                        <td>150</td>
+                        <td><a href="business.pdf">Download</a></td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Study Docs | All Rights Reserved</p>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://wa.me/1234567890" target="_blank" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+        </div>
+
+    </footer>
+
+    <script>
+        // Function to display documents from localStorage
+        function displayDocuments() {
+            const documents = JSON.parse(localStorage.getItem('documents')) || [];
+            const documentsList = document.getElementById('documents'); // Ensure this ID exists
+    
+            // Clear the list before displaying
+            documentsList.innerHTML = '';
+    
+            // Loop through the documents and create table rows
+            documents.forEach(doc => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>Uploaded Document</td>
+                    <td>${doc.title}</td>
+                    <td>${doc.subject}</td>
+                    <td>N/A</td> <!-- Assuming price is not applicable for uploaded documents -->
+                    <td><a href="${doc.fileUrl}" target="_blank">View</a></td>
+                `;
+                documentsList.appendChild(row);
+            });
+        }
+    
+        // Call the function to display documents when the page loads
+        document.addEventListener('DOMContentLoaded', displayDocuments);
+    </script>
+    
+    <script src="stud.js"></script>
+</body>
+</html>

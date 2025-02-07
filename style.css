@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+}
+
+
+body {
+    background-image: url('lib.jpeg.jpg'); /* Path to your background image */
+    background-size: cover; /* Cover the entire viewport */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    color: white; /* Default text color for better contrast */
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for the header */
+    padding: 20px;
+    color: white;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo h1 {
+    font-size: 28px;
+}
+
+header .nav-links {
+    list-style-type: none;
+    display: flex;
+}
+
+header .nav-links li {
+    margin-left: 20px;
+}
+
+header .nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+header .nav-links li a:hover {
+    color: #f39c12; /* Change color to gold on hover */
+}
+
+.hero {
+    background-color: rgba(1, 21, 26, 0.8); /* Semi-transparent background for contrast */
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero h2 {
+    font-size: 36px;
+    color: rgb(247, 243, 243);
+}
+
+.hero p {
+    font-size: 18px;
+    color: var(--light-text);
+    margin-bottom: 20px;
+}
+
+.search-form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.search-form input {
+    width: 400px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.search-form button {
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.featured-documents {
+    padding: 40px 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background for readability */
+    text-align: center;
+}
+
+.featured-documents h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.document-list {
+    display: flex;
+    justify-content: space-around;
+}
+
+.document-item {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 8px;
+    width: 200px;
+    text-align: center;
+}
+
+.document-item h4 {
+    font-size: 20px;
+    color: var(--secondary-color);
+}
+
+.document-item p {
+    font-size: 14px;
+    color: var(--light-text);
+}
+
+.download-btn {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.download-btn:hover {
+    background-color: #2980b9; /* Darker shade on hover */
+}
+
+.upload {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.upload-form-container {
+    background-color: #0c0000;
+    border: 1px solid #0c0000;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.upload-form-container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #110000;
+    border-radius: 5px;
+}
+
+.upload-form-container button {
+    background-color: white;
+    color: rgb(14, 1, 1);
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for footer */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+}

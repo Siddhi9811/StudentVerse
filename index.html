@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Marketplace</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Add background image to the body using pseudo-element */
+        body {
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+            font-family: Arial, sans-serif; /* Set a default font */
+            color: white; /* Set text color to white for better contrast */
+            position: relative; /* Position relative for pseudo-element */
+            overflow: auto; /* Allow scrolling */
+        }
+
+        body::before {
+            content: ""; /* Required for pseudo-element */
+            position: fixed; /* Fixed position to cover the viewport */
+            top: 0; /* Align to the top */
+            left: 0; /* Align to the left */
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            background-image: url('your-image-url.jpg'); /* Replace with your image URL */
+            background-size: cover; /* Cover the entire viewport */
+            background-position: center; /* Center the image */
+            background-repeat: no-repeat; /* Prevent repeating the image */
+            z-index: -1; /* Send to back */
+        }
+
+        /* Navigation Bar Styles */
+        header {
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background for nav */
+            padding: 10px 20px; /* Padding for header */
+        }
+
+        nav {
+            display: flex; /* Use flexbox for navigation */
+            justify-content: space-between; /* Space between logo and links */
+            align-items: center; /* Center items vertically */
+        }
+
+        .nav-links {
+            list-style: none; /* Remove bullet points */
+            padding: 0; /* Remove padding */
+            display: flex; /* Use flexbox for links */
+        }
+
+        .nav-links li {
+            margin-left: 20px; /* Space between links */
+        }
+
+        .nav-links a {
+            color: #fff; /* White text color for links */
+            text-decoration: none; /* Remove underline from links */
+        }
+
+        /* Hero Section Styles */
+        .hero {
+            display: flex; /* Use flexbox for alignment */
+            justify-content: center; /* Center content horizontally */
+            align-items: center; /* Center content vertically */
+            height: 100vh; /* Full viewport height */
+            text-align: center; /* Center text */
+            padding: 20px; /* Padding for hero section */
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */
+        }
+
+        .hero-content h2 {
+            font-size: 2.5em; /* Larger font size for heading */
+            margin: 0; /* Remove default margin */
+        }
+
+        .hero-content p {
+            font-size: 1.2em; /* Font size for paragraph */
+        }
+
+        .search-form {
+            margin-top: 20px; /* Space above the form */
+        }
+
+        .search-form input {
+            padding: 10px; /* Padding for input */
+            font-size: 1em; /* Font size for input */
+            border: none; /* Remove border */
+            border-radius: 5px; /* Rounded corners */
+        }
+
+        .search-form button {
+            padding: 10px 15px; /* Padding for button */
+            font-size: 1em; /* Font size for button */
+            border: none; /* Remove border */
+            border-radius: 5px; /* Rounded corners */
+            background-color: #4e0f0f; /* Button color */
+            color: white; /* Button text color */
+            cursor: pointer; /* Pointer cursor on hover */
+        }
+
+        /* Featured Documents Styles */
+        .featured-documents {
+            padding: 20px; /* Padding for section */
+            text-align: center; /* Center text */
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */
+        }
+
+        .document-list {
+            display: flex; /* Use flexbox for document items */
+            justify-content: center; /* Center items */
+            flex-wrap: wrap; /* Allow wrapping */
+        }
+
+        .document-item {
+            background-color: rgba(255, 255, 255, 0.8); /* Light background for document item */
+            border-radius: 10px; /* Rounded corners */
+            padding: 15px; /* Padding for document item */
+            margin: 10px; /* Margin between items */
+            width: 200px; /* Fixed width for document item */
+            text-align: left; /* Align text to the left */
+        }
+
+        .download-btn {
+            background-color: #4e1212; /* Button color */
+            color: white; /* Button text color */
+            border: none; /* Remove border */
+            padding: 10px; /* Padding for button */
+            border-radius: 5px; /* Rounded corners */
+            cursor: pointer; /* Pointer cursor on hover */
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background for footer */
+            color: white; /* White text color */
+            text-align: center; /* Center text */
+            padding: 10px; /* Padding for footer */
+            position: relative; /* Position for footer */
+            bottom: 0; /* Stick to bottom */
+            width: 100%; /* Full width */
+        }
+        
+        .social-icons {
+            display: flex; /* Use flexbox for alignment */
+            justify-content: center; /* Center the icons horizontally */
+            margin-top: 10px; /* Add some space above the icons */
+        }
+
+        .social-icon {
+            margin: 0 10px; /* Add horizontal spacing between icons */
+            font-size: 24px; /* Increase icon size for better visibility */
+            color: #f7f3f3; /* Set icon color */
+            transition: color 0.3s; /* Smooth transition for hover effect */
+        }
+
+        .social-icon:hover {
+            color: #f39c12; /* Change color on hover */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>StudentVerse</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="item.html">Upload</a></li>
+                <li><a href="list.html">List</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="log.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Find and Share Study Materials</h2>
+            <p>Join the largest community for study materials, notes, and more.</p>
+            <form class="search-form" id="searchForm">
+                <input type="text" id="searchInput" placeholder="Search for documents, notes...">
+                <button type="submit">Search</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Featured Documents -->
+    <section class="featured-documents">
+        <h3>Featured Documents</h3>
+        <div class="document-list">
+            <div class="document-item">
+                <h4>Mathematics 101</h4>
+                <p>Subject: Math</p>
+                <a href="maths.pdf" class="download-btn" download>Download</a>
+
+            </div>
+            <div class="document-item">
+                <h4>Java Notes</h4>
+                <p>Subject: Java</p>
+                <a href="java.pdf" class="download-btn" download>Download</a>
+            </div>
+            <div class="document-item">
+                <h4>Python Guide</h4>
+                <p>Subject: Python</p>
+                <a href="python.pdf" class="download-btn" download>Download</a>
+                
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Study Docs | All Rights Reserved</p>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://wa.me/1234567890" target="_blank" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+        </div>
+
+    </footer>
+
+    <script>
+        // Sample data for documents
+        const documents = [
+            { title: "Mathematics 101", subject: "Math" },
+            { title: "Java Notes", subject: "Java" },
+            { title: "Python Guide", subject: "Python" },
+            // Add more documents as needed
+        ];
+
+        // Function to handle the search
+        function handleSearch(event) {
+            event.preventDefault(); // Prevent the form from submitting
+
+            const searchInput = document.getElementById('searchInput').value.toLowerCase(); // Get the search input
+            const results = documents.filter(doc => doc.title.toLowerCase().includes(searchInput)); // Filter documents
+
+            // Display results
+            if (results.length > 0) {
+                alert("Search Results:\n" + results.map(doc => doc.title).join("\n")); // Display results in an alert (you can customize this)
+            } else {
+                alert("No documents found.");
+            }
+        }
+
+        // Attach the search handler to the form
+        document.getElementById('searchForm').addEventListener('submit', handleSearch);
+    </script>
+</body>
+</html>
